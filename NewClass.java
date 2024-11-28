@@ -346,8 +346,7 @@ public class Serveur {
     public static void main(String[] args) {
         // TODO code application logic here
         try {
-            ServerSocket ecoute;
-            ecoute = new ServerSocket(1111,6);
+            ServerSocket ecoute = new ServerSocket(1111,6);
             Socket service=null ;
             {
                 service=ecoute.accept();
@@ -407,3 +406,70 @@ public class Client {
     }
     
 }
+
+
+/**
+ * 1- Quelles sont les architectures de systèmes parallèles ?
+A. SI, SD, MI, MD
+
+2- Quelle sont les deux méthodes pour créer un thread en Java ?
+C. Implémenter l'interface Runnable et Étendre la classe Thread
+
+3- L'interface Runnable - qu'est-ce qu'il contient comme méthode ?
+A. run()
+
+4- Différents états du cycle de vie d'un thread ?
+B. NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED
+
+* 5- Quelle est l'exclusion mutuelle et la différence entre Dekker et Peterson ?
+B. Dekker est spécifique à deux threads, Peterson est plus général.
+
+* 6- Quelle méthode permet de bloquer les threads jusqu'à l'appel d'une méthode notify() ?
+B. wait()
+
+* 7- Bloquer le thread pour une période déterminée :
+B. Faux
+
+* 9- Comment éviter que les données partagées soient rompues dans un environnement
+multithread ?
+A. Utiliser des méthodes synchronisées
+
+* 10- Pour échanger la priorité d'un thread, on utilise la méthode :
+A. setPriority()
+
+* 11- C'est quoi le problème de l'incrémentation sans synchronisation ?
+B. Les threads peuvent accéder simultanément à la ressource.
+
+* 12- Quelle méthode permet de vérifier si un thread est en cours d'exécution ?
+A. isAlive()
+
+* 13- Quelle est la différence entre run() et start() ?
+B. start() crée un nouveau thread, run() l'exécute directement.
+
+* 14- Comment créer un thread en utilisant l'interface Runnable ?
+D. Implanter la méthode run() et passer l'objet à un thread.
+
+* 1. Qu'est-ce qu'un Mutex ?
+A. Un mécanisme pour gérer l'accès concurrent à une ressource partagée
+
+* 2. Quelle est la différence entre les algorithmes de Dekker et Peterson ?
+B. Les threads de Dekker sont altruistes et ceux de Peterson sont égoïstes
+
+* 7. Quelles sont les transitions possibles entre les états d'un thread ?
+B. RUNNABLE ↔ WAITING, BLOCKED → TERMINATED
+
+* 8. Quel est le rôle de la méthode join() ?
+  B. Attendre la fin de l'exécution d'un autre thread
+
+* 9. Quel est le rôle de la méthode wait() ?
+B. Bloquer un thread jusqu'à l'appel de la méthode notify()
+
+* 11. Que signifie un "deadlock" ?
+C. Un blocage mutuel de deux ou plusieurs threads attendant des ressources
+
+* 12. Quelle est la différence entre wait() et sleep() ?
+B. wait() ne libère pas le verrou, sleep() le libère
+
+* 13. Que permet la synchronisation dans le contexte des threads ?
+B. Contrôler l'accès aux ressources partagées pour éviter les conflits
+ * /
